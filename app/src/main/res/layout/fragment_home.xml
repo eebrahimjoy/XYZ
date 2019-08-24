@@ -12,16 +12,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:layout_marginBottom="5dp"
-            android:elevation="5dp">
+            android:background="@color/colorPrimary">
 
             <LinearLayout
-                android:layout_marginLeft="@dimen/margin_small"
-                android:layout_marginRight="@dimen/margin_small"
                 android:weightSum="6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?attr/actionBarSize"
                 android:orientation="horizontal">
 
                 <Button

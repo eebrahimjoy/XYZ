@@ -13,11 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="2dp">
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout_id"
@@ -30,9 +25,7 @@
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/colorPrimary"
                 app:tabTextAppearance="@style/CustomTextStyle"
-                app:tabTextColor="@color/colorPrimary" />
-
-        </androidx.cardview.widget.CardView>
+                app:tabTextColor="@color/black" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPagerId"

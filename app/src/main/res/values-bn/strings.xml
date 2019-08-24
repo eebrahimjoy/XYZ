@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">XYZ</string>
+    <string name="tab1">ট্যাব-১</string>
+    <string name="tab2">ট্যাব-২</string>
+    <string name="tab3">ট্যাব-৩</string>
+    <string name="tab4">ট্যাব-৪</string>
+    <string name="tab5">ট্যাব-৫</string>
+    <string name="tab6">ট্যাব-৬</string>
+    <string name="home">হোম</string>
+    <string name="messenger">বার্তা</string>
+    <string name="box">বক্স</string>
+    <string name="settings">সেটিংস</string>
+    <string name="more">আরোও</string>
+    <string name="logout">লগাউট</string>
+    <string name="help_and_legal">হেল্প অ্যান্ড লিগ্যাল</string>
+    <string name="helpline">হেল্পলাইন</string>
+    <string name="terms_and_conditions">শর্তাবলি</string>
+    <string name="others">আরোও</string>
+    <string name="language">ভাষা</string>
+    <string name="english">ইংরেজী</string>
+    <string name="bengali">বাংলা</string>
+    <string name="leftTab">বাম ট্যাব</string>
+    <string name="rightTab">ডান ট্যাব</string>
+</resources>

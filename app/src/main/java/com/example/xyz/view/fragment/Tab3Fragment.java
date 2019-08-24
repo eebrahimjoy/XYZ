@@ -43,8 +43,8 @@ public class Tab3Fragment extends Fragment {
     }
 
     private void initTab() {
-        adapter.addFragment(new LeftTabFragment(), "leftOneTab");
-        adapter.addFragment(new RightTabFragment(),"rightOneTab");
+        adapter.addFragment(new LeftTabFragment(), getActivity.getResources().getString(R.string.leftTab));
+        adapter.addFragment(new RightTabFragment(),getActivity.getResources().getString(R.string.rightTab));
         binding.viewPagerId.setAdapter(adapter);
         binding.tabLayoutId.setupWithViewPager(binding.viewPagerId);
     }

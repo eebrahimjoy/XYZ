@@ -52,12 +52,10 @@ public class HomeFragment extends Fragment {
                 inflater, R.layout.fragment_home, container, false);
         View view = binding.getRoot();
 
-        initialize();
-
-
         binding.tab3Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                binding.tab3Btn.setTextColor(getResources().getColor(R.color.colorPrimary));
                 binding.tab3Btn.setBackgroundColor(getResources().getColor(R.color.white));
                 replaceFragment(new Tab3Fragment());
             }
@@ -69,11 +67,6 @@ public class HomeFragment extends Fragment {
 
 
     }
-
-    private void initialize() {
-
-    }
-
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frameLayoutInsideFragment,fragment);
