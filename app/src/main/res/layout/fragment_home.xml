@@ -25,65 +25,82 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab1"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
 
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab2"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:id="@+id/tab3Btn"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab3"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab4"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab5"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
                 <Button
-                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
                     android:textStyle="bold"
                     android:text="@string/tab6"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
 
 
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/frameLayoutInsideFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
 
 
 

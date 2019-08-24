@@ -1,6 +1,7 @@
 package com.example.xyz.view.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -50,11 +52,32 @@ public class HomeFragment extends Fragment {
                 inflater, R.layout.fragment_home, container, false);
         View view = binding.getRoot();
 
+        initialize();
+
+
+        binding.tab3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.tab3Btn.setBackgroundColor(getResources().getColor(R.color.white));
+                replaceFragment(new Tab3Fragment());
+            }
+        });
+
+
+
         return view;
 
 
     }
 
+    private void initialize() {
 
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayoutInsideFragment,fragment);
+        ft.commit();
+    }
 
 }
