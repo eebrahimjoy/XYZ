@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">XYZ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1">Tab1</string>
+    <string name="tab2">Tab2</string>
+    <string name="tab3">Tab3</string>
+    <string name="tab4">Tab4</string>
+    <string name="tab5">Tab5</string>
+    <string name="tab6">Tab6</string>
 </resources>

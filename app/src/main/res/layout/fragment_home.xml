@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.HomeFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:weightSum="6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab1"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab3"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab4"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab5"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold"
+                    android:text="@string/tab6"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </RelativeLayout>
+</layout>
