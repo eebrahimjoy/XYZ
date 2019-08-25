@@ -53,17 +53,18 @@ public class LeftTabFragment extends Fragment {
         companyList = new ArrayList<>();
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
     }
+
     private void getCompanyList() {
-         companies = homeViewModel.getCompanies();
-         if (companies.size()>0){
-             companyList.clear();
-             companyList.addAll(companies);
+        companies = homeViewModel.getCompanies();
+        if (companies.size() > 0) {
+            companyList.clear();
+            companyList.addAll(companies);
 
-             ProductAdapter adapter = new ProductAdapter(companyList);
-             binding.recyclerView.setAdapter(adapter);
-             adapter.notifyDataSetChanged();
+            ProductAdapter adapter = new ProductAdapter(companyList);
+            binding.recyclerView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
 
-         }
+        }
     }
 
 

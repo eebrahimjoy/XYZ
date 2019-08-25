@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -15,72 +15,76 @@
             android:background="@color/colorPrimary">
 
             <LinearLayout
-                android:weightSum="6"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="6">
 
                 <Button
                     android:id="@+id/tab1Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab1"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab1"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/tab2Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab2"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab2"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/tab3Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab3"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab3"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/tab4Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab4"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab4"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/tab5Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab5"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab5"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/tab6Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@color/colorPrimary"
+                    android:text="@string/tab6"
                     android:textColor="@color/white"
                     android:textSize="@dimen/medium_text"
-                    android:textStyle="bold"
-                    android:text="@string/tab6"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -88,21 +92,20 @@
         </androidx.appcompat.widget.Toolbar>
 
 
-    <RelativeLayout
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <FrameLayout
-            android:id="@+id/frameLayoutInsideFragment"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
 
-        </FrameLayout>
 
-    </RelativeLayout>
+            <FrameLayout
+                android:id="@+id/frameLayoutInsideFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+            </FrameLayout>
+
+        </RelativeLayout>
 
 
     </RelativeLayout>

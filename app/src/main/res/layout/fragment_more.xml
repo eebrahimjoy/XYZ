@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -191,7 +192,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight=".5"
                                 android:text="@string/bengali"
-                                android:textColor="@color/light_gray"/>
+                                android:textColor="@color/light_gray" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

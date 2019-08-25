@@ -1,6 +1,7 @@
 package com.example.xyz.repository;
 
 import android.app.Application;
+
 import com.example.xyz.model.Company;
 import com.example.xyz.model.Product;
 
@@ -30,7 +31,7 @@ public class HomeRepo {
         androidProducts = new ArrayList<>();
         computerProducts = new ArrayList<>();
         tableProducts = new ArrayList<>();
-        softwareProducts  = new ArrayList<>();
+        softwareProducts = new ArrayList<>();
 
         googleProducts.add(new Product("Google Drive"));
         googleProducts.add(new Product("Google Message"));

@@ -1,7 +1,5 @@
 package com.example.xyz.view.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,13 +10,12 @@ import android.view.ViewGroup;
 
 import com.example.xyz.R;
 
- public class BoxFragment extends Fragment {
+public class BoxFragment extends Fragment {
 
 
     public BoxFragment() {
 
     }
-
 
 
     @Override

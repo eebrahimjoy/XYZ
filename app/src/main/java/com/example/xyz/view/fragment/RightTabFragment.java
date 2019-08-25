@@ -1,7 +1,5 @@
 package com.example.xyz.view.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -15,7 +13,6 @@ import android.view.ViewGroup;
 
 import com.example.xyz.R;
 import com.example.xyz.adapter.ProductAdapter;
-import com.example.xyz.databinding.FragmentLeftTabBinding;
 import com.example.xyz.databinding.FragmentRightTabBinding;
 import com.example.xyz.model.Company;
 import com.example.xyz.viewmodel.HomeViewModel;

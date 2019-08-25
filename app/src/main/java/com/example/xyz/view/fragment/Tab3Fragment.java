@@ -1,7 +1,6 @@
 package com.example.xyz.view.fragment;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -14,8 +13,6 @@ import android.view.ViewGroup;
 import com.example.xyz.R;
 import com.example.xyz.adapter.ViewPagerAdapter;
 import com.example.xyz.databinding.FragmentTab3Binding;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class Tab3Fragment extends Fragment {
     private FragmentTab3Binding binding;

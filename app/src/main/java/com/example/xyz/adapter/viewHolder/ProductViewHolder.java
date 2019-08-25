@@ -8,7 +8,7 @@ import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
 public class ProductViewHolder extends ChildViewHolder {
 
-    ModelExapdableRecyclerviewProductBinding binding;
+    private ModelExapdableRecyclerviewProductBinding binding;
 
 
     public ProductViewHolder(@NonNull ModelExapdableRecyclerviewProductBinding binding) {

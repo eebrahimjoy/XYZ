@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.fragment.BoxFragment">
+<layout>
 
-    <TextView
-        android:text="@string/under_development"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/large_text_size"
-       android:layout_gravity="center"
-        android:gravity="center"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.fragment.BoxFragment">
 
-    </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/under_development"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/large_text_size"
+            android:textStyle="bold">
 
-</LinearLayout>
+        </TextView>
+
+    </LinearLayout>
+</layout>

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/productTextView"
-                android:textColor="@color/colorPrimary"
-                android:text="Product"
-                android:textSize="@dimen/small_text_size"
-                android:paddingLeft="45dp"
-                android:paddingStart="45dp"
-                android:padding="?android:listPreferredItemPaddingLeft"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:padding="?android:listPreferredItemPaddingLeft"
+                android:paddingStart="45dp"
+                android:paddingLeft="45dp"
+                android:text="Product"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/small_text_size" />
 
         </LinearLayout>
-
-
 
 
     </RelativeLayout>
