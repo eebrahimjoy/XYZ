@@ -21,4 +21,7 @@
     <string name="bengali">বাংলা</string>
     <string name="leftTab">বাম ট্যাব</string>
     <string name="rightTab">ডান ট্যাব</string>
+    <string name="next">পরবর্তী</string>
+    <string name="hello_blank_fragment">খালি পাতা</string>
+    <string name="under_development">উন্নতির কাজ চলিতেছে</string>
 </resources>

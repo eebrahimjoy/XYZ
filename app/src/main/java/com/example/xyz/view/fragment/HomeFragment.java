@@ -19,6 +19,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.xyz.Interface.OnMenuItemClickedListener;
 import com.example.xyz.R;
@@ -57,9 +58,62 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 binding.tab3Btn.setTextColor(getResources().getColor(R.color.colorPrimary));
                 binding.tab3Btn.setBackgroundColor(getResources().getColor(R.color.white));
+
+                binding.tab1Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab1Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                binding.tab2Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab2Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 replaceFragment(new Tab3Fragment());
             }
         });
+
+        binding.tab1Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.tab1Btn.setTextColor(getResources().getColor(R.color.colorPrimary));
+                binding.tab1Btn.setBackgroundColor(getResources().getColor(R.color.white));
+
+                binding.tab3Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab3Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                binding.tab2Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab2Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                replaceFragment(new Tab1Fragment());
+            }
+        });
+
+        binding.tab2Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.tab2Btn.setTextColor(getResources().getColor(R.color.colorPrimary));
+                binding.tab2Btn.setBackgroundColor(getResources().getColor(R.color.white));
+
+                binding.tab3Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab3Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                binding.tab1Btn.setTextColor(getResources().getColor(R.color.white));
+                binding.tab1Btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                replaceFragment(new Tab1Fragment());
+            }
+        });
+        binding.tab4Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), ""+getActivity().getResources().getString(R.string.under_development), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        binding.tab5Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), ""+getActivity().getResources().getString(R.string.under_development), Toast.LENGTH_SHORT).show();
+            }
+        });
+        binding.tab6Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), ""+getActivity().getResources().getString(R.string.under_development), Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 

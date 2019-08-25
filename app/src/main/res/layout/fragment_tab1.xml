@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.MessengerFragment">
+    tools:context=".view.fragment.Tab1Fragment">
+
 
     <TextView
-        android:text="Under Development"
+        android:text="@string/under_development"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/large_text_size"
@@ -18,5 +19,4 @@
         android:layout_height="match_parent">
 
     </TextView>
-
 </LinearLayout>

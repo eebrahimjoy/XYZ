@@ -116,4 +116,16 @@ public class HomeActivity extends AppCompatActivity implements OnMenuItemClicked
         editor.putString(SharedPref.LANGUAGE_TYPE, type);
         editor.apply();
     }
+    @Override
+    public void onBackPressed() {
+        if (currentPage == 0) {
+
+            super.onBackPressed();
+
+
+        } else {
+            View view = binding.navigation.findViewById(R.id.navigation_home);
+            view.performClick();
+        }
+    }
 }
