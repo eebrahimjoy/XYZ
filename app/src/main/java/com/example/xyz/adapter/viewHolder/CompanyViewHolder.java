@@ -1,11 +1,10 @@
 package com.example.xyz.adapter.viewHolder;
 
-import android.view.animation.RotateAnimation;
+import com.example.xyz.R;
 import com.example.xyz.databinding.ModelExapandableRecyclerViewCompanyBinding;
 import com.example.xyz.model.Company;
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 
-import static android.view.animation.Animation.RELATIVE_TO_SELF;
 
 public class CompanyViewHolder extends GroupViewHolder {
 
@@ -30,18 +29,11 @@ public class CompanyViewHolder extends GroupViewHolder {
     }
 
     private void animateExpand() {
-        RotateAnimation rotate =
-                new RotateAnimation(360, 180, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
-        rotate.setDuration(300);
-        rotate.setFillAfter(true);
-        binding.arrowIV.setAnimation(rotate);
+
+        binding.arrowIV.setImageResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
     }
 
     private void animateCollapse() {
-        RotateAnimation rotate =
-                new RotateAnimation(180, 360, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
-        rotate.setDuration(300);
-        rotate.setFillAfter(true);
-        binding.arrowIV.setAnimation(rotate);
+        binding.arrowIV.setImageResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
     }
 }

@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.example.xyz.R;
 import com.example.xyz.adapter.ProductAdapter;
 import com.example.xyz.databinding.FragmentLeftTabBinding;
+import com.example.xyz.databinding.FragmentRightTabBinding;
 import com.example.xyz.model.Company;
 import com.example.xyz.viewmodel.HomeViewModel;
 
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RightTabFragment extends Fragment {
-    private FragmentLeftTabBinding binding;
+    private FragmentRightTabBinding binding;
     private HomeViewModel homeViewModel;
     private List<Company> companies;
     private List<Company> companyList;
