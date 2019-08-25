@@ -8,7 +8,7 @@
     tools:context=".view.fragment.BoxFragment">
 
     <TextView
-        android:text="Under Development"
+        android:text="@string/under_development"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/large_text_size"
