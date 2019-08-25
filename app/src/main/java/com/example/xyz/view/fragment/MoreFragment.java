@@ -42,6 +42,7 @@ public class MoreFragment extends Fragment {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_more, container, false);
         View view = binding.getRoot();
+
         initialize();
 
         String languageType = sharedPreferences.getString(SharedPref.LANGUAGE_TYPE, "");
