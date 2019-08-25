@@ -9,17 +9,41 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
 
-            </androidx.recyclerview.widget.RecyclerView>
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/recyclerView"
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_fill_with_radius"
+                    android:layout_gravity="center"
+                    android:text="@string/next"
+                    android:textSize="@dimen/large_text_size"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"/>
+
+
+
+            </RelativeLayout>
+
+
 
 
         </ScrollView>
+
 
 
     </LinearLayout>
