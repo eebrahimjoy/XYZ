@@ -119,10 +119,7 @@ public class HomeActivity extends AppCompatActivity implements OnMenuItemClicked
     @Override
     public void onBackPressed() {
         if (currentPage == 0) {
-
             super.onBackPressed();
-
-
         } else {
             View view = binding.navigation.findViewById(R.id.navigation_home);
             view.performClick();

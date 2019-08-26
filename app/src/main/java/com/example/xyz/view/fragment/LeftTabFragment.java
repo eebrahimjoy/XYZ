@@ -39,6 +39,8 @@ public class LeftTabFragment extends Fragment {
                 inflater, R.layout.fragment_left_tab, container, false);
         View view = binding.getRoot();
 
+        binding.progressBarId.setVisibility(View.VISIBLE);
+
         init();
 
         getCompanyList();
@@ -57,12 +59,16 @@ public class LeftTabFragment extends Fragment {
     private void getCompanyList() {
         companies = homeViewModel.getCompanies();
         if (companies.size() > 0) {
+            binding.progressBarId.setVisibility(View.GONE);
             companyList.clear();
             companyList.addAll(companies);
 
             ProductAdapter adapter = new ProductAdapter(companyList);
             binding.recyclerView.setAdapter(adapter);
             adapter.notifyDataSetChanged();
+
+        }else {
+            binding.progressBarId.setVisibility(View.VISIBLE);
 
         }
     }

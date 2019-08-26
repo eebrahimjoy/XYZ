@@ -1,5 +1,4 @@
 package com.example.xyz.view.fragment;
-
 import android.content.Context;
 import android.os.Bundle;
 
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.xyz.R;
 import com.example.xyz.adapter.ViewPagerAdapter;
 import com.example.xyz.databinding.FragmentTab3Binding;
