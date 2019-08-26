@@ -1,23 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".view.fragment.Tab1Fragment">
+        tools:context=".view.fragment.Tab2Fragment">
 
 
-        <TextView
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/swipeRefreshLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/under_development"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/large_text_size"
-            android:textStyle="bold">
+            android:layout_height="match_parent">
 
-        </TextView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/profileL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profileImage"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/ic_person_black_24dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/nameTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:maxLines="2"
+                                    android:textStyle="bold"
+                                    android:text="Md. Ebrahim Joy"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/medium_text" />
+
+                                <TextView
+                                    android:id="@+id/numberTV"
+                                    android:text="+8801515214189"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTint="@color/black"
+                                    android:gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/small_text_size" />
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/gray" />
+
+                            <TextView
+                                android:id="@+id/statusTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="15dp"
+                                android:text="Verified"
+                                android:textSize="@dimen/medium_text" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="Company"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/medium_text"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/provideServiceContainerRV"
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp">
+
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/requestBadgeTV"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:elevation="5dp"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="@dimen/small_text_size" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:id="@+id/provideServiceCV"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:tint="@color/colorPrimary"
+                                                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:maxLines="2"
+                                                    android:textAlignment="center"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="Microsoft"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/small_text_size" />
+
+
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/pendingServiceContainerRV"
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/pendingServiceCV"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:src="@drawable/ic_person_black_24dp"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:tint="@color/colorPrimary" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:maxLines="2"
+                                                    android:layout_marginTop="5dp"
+                                                    android:textAlignment="center"
+                                                    android:text="Google"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/small_text_size" />
+
+
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/regCustomerContainerRV"
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp">
+
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/regCustomerCV"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:tint="@color/colorPrimary"
+                                                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:maxLines="2"
+                                                    android:layout_marginTop="5dp"
+                                                    android:textAlignment="center"
+                                                    android:text="Amazon"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/small_text_size" />
+
+
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardCornerRadius="8dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="Services"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/medium_text"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/lawyerCommissionCV"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/lawyerCommissionContainerRV"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:tint="@color/colorPrimary"
+                                                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:maxLines="2"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="Offline"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/small_text_size" />
+
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/customerCommissionCV"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:cardCornerRadius="5dp">
+
+                                        <RelativeLayout
+                                            android:id="@+id/customerCommissionContainerRV"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center"
+                                                    android:tint="@color/colorPrimary"
+                                                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:maxLines="2"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="Online"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="@dimen/small_text_size" />
+
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
     </LinearLayout>
 </layout>

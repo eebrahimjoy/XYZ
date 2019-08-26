@@ -10,4 +10,5 @@
     <color name="gray">#e2dee3</color>
     <color name="offWhite">#DBDBDB</color>
     <color name="light_gray">#9B9B9B</color>
+    <color name="image_border_color">#80000000</color>
 </resources>

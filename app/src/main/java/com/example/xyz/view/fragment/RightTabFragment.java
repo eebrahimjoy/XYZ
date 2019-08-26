@@ -12,19 +12,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.xyz.R;
+import com.example.xyz.adapter.MultiTypeCompanyAdapter;
+import com.example.xyz.databinding.FragmentLeftTabBinding;
 import com.example.xyz.databinding.FragmentRightTabBinding;
+import com.example.xyz.model.Company;
 import com.example.xyz.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.xyz.otherClasses.CreateCompany.makeGenres;
+
 public class RightTabFragment extends Fragment {
     private FragmentRightTabBinding binding;
     private HomeViewModel homeViewModel;
+    private List<Company> companies;
+    private List<Company> companyList;
 
     public RightTabFragment() {
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,15 +43,25 @@ public class RightTabFragment extends Fragment {
 
         init();
 
-        //initRecyclerView();
+        getCompanyList();
+
+        initRecyclerView();
 
         return view;
     }
 
     private void init() {
+        companies = new ArrayList<>();
+        companyList = new ArrayList<>();
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
     }
 
+    private void getCompanyList() {
+        MultiTypeCompanyAdapter adapter = new MultiTypeCompanyAdapter(makeGenres(), getActivity());
+        binding.recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+    }
 
 
     private void initRecyclerView() {
