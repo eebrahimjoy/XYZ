@@ -1,4 +1,5 @@
 package com.example.xyz.view.fragment;
+
 import android.content.Context;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.xyz.R;
 import com.example.xyz.adapter.ViewPagerAdapter;
 import com.example.xyz.databinding.FragmentTab3Binding;
@@ -39,11 +41,10 @@ public class Tab3Fragment extends Fragment {
 
     private void initTab() {
         adapter.addFragment(new LeftTabFragment(), getActivity.getResources().getString(R.string.leftTab));
-        adapter.addFragment(new RightTabFragment(),getActivity.getResources().getString(R.string.rightTab));
+        adapter.addFragment(new RightTabFragment(), getActivity.getResources().getString(R.string.rightTab));
         binding.viewPagerId.setAdapter(adapter);
         binding.tabLayoutId.setupWithViewPager(binding.viewPagerId);
     }
-
 
 
 }

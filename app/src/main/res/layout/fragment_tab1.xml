@@ -11,7 +11,6 @@
 
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:layout_below="@+id/toolbar"
             android:id="@+id/swipeRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -152,20 +151,6 @@
                                     android:id="@+id/provideServiceContainerRV"
                                     android:layout_width="95dp"
                                     android:layout_height="95dp">
-
-
-                                    <TextView
-                                        android:visibility="gone"
-                                        android:id="@+id/requestBadgeTV"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_alignParentRight="true"
-                                        android:elevation="5dp"
-                                        android:gravity="center"
-                                        android:text="0"
-                                        android:textColor="@android:color/white"
-                                        android:textSize="@dimen/small_text_size" />
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="80dp"
