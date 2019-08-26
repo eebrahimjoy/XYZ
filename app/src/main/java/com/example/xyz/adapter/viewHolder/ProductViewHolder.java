@@ -1,21 +1,29 @@
 package com.example.xyz.adapter.viewHolder;
+import android.content.Context;
+import android.view.View;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
-import com.example.xyz.databinding.ModelExapdableRecyclerviewProductBinding;
-import com.example.xyz.model.Product;
+import com.example.xyz.databinding.ModeListItemProductBinding;
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
 public class ProductViewHolder extends ChildViewHolder {
 
-    private ModelExapdableRecyclerviewProductBinding binding;
+    private ModeListItemProductBinding productBinding;
+    private Context context;
 
-
-    public ProductViewHolder(@NonNull ModelExapdableRecyclerviewProductBinding binding) {
-        super(binding.getRoot());
-        this.binding = binding;
+    public ProductViewHolder(ModeListItemProductBinding productBinding, Context context) {
+        super(productBinding.getRoot());
+        this.productBinding = productBinding;
+        this.context = context;
     }
-    public void bind (Product product){
-        binding.productTextView.setText(product.name);
+
+    public void setProductName(String name) {
+        productBinding.productTV.setText(name);
+
+        if (name == "120"){
+            Toast.makeText(context, ""+name, Toast.LENGTH_SHORT).show();
+            productBinding.viewId.setVisibility(View.VISIBLE);
+        }
     }
 }
+

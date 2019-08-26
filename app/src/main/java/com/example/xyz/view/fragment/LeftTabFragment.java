@@ -12,13 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.xyz.R;
-import com.example.xyz.adapter.ProductAdapter;
+import com.example.xyz.adapter.MultiTypeCompanyAdapter;
 import com.example.xyz.databinding.FragmentLeftTabBinding;
 import com.example.xyz.model.Company;
 import com.example.xyz.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.xyz.otherClasses.CreateCompany.makeGenres;
 
 
 public class LeftTabFragment extends Fragment {
@@ -39,8 +41,6 @@ public class LeftTabFragment extends Fragment {
                 inflater, R.layout.fragment_left_tab, container, false);
         View view = binding.getRoot();
 
-        binding.progressBarId.setVisibility(View.VISIBLE);
-
         init();
 
         getCompanyList();
@@ -57,20 +57,11 @@ public class LeftTabFragment extends Fragment {
     }
 
     private void getCompanyList() {
-        companies = homeViewModel.getCompanies();
-        if (companies.size() > 0) {
-            binding.progressBarId.setVisibility(View.GONE);
-            companyList.clear();
-            companyList.addAll(companies);
 
-            ProductAdapter adapter = new ProductAdapter(companyList);
-            binding.recyclerView.setAdapter(adapter);
-            adapter.notifyDataSetChanged();
+        MultiTypeCompanyAdapter adapter = new MultiTypeCompanyAdapter(makeGenres(), getActivity());
+        binding.recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
-        }else {
-            binding.progressBarId.setVisibility(View.VISIBLE);
-
-        }
     }
 
 

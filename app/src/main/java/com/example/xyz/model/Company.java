@@ -1,17 +1,16 @@
 package com.example.xyz.model;
 
-import android.os.Parcel;
-
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 
 import java.util.List;
 
-public class Company extends ExpandableGroup {
-    public Company(String title, List items) {
-        super(title, items);
-    }
+public class Company extends ExpandableGroup<Product> {
 
-    protected Company(Parcel in) {
-        super(in);
-    }
+
+        public Company(String title, List<Product> items) {
+                super(title, items);
+        }
+
+
 }
+
