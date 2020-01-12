@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="সহজ সেবা"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <FrameLayout
+                    android:id="@+id/notificationL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clipToPadding="false"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="জনপ্রিয় সেবাসমূহ"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/provideServiceCV"
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/utility" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="ইউটিলিটি বিল"
+                                                android:textAlignment="center"
+                                                android:textSize="14sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/pendingServiceContainerRV"
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/pendingServiceCV"
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/transport" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="যানবাহন সেবা"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/health" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="স্বাস্থ্য বিষয়ক"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/postal" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="পোস্টাল ও কুরিয়ার"
+                                                android:textAlignment="center"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/radio_tv" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="রেডিও, টিভির"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/your_question" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="আপনার জিজ্ঞাসা"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/invoice_forms" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="ট্রেজারি চালান"
+                                                android:textAlignment="center"
+                                                android:textSize="14sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/agriculture" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="মৎস্য ও প্রাণী"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/digital_center" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="ডিজিটাল সেন্টার"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/apply_education" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="শিক্ষা-বিষয়ক"
+                                                android:textAlignment="center"
+                                                android:textSize="14sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/birth_certificate" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="অনলাইন নিবন্ধন"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/business" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="অর্থ ও বাণিজ্য"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/provideServiceContainerRV"
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/tin" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="আয়কর"
+                                                android:textAlignment="center"
+                                                android:textSize="14sp" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/exam_result" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="পরীক্ষার ফলাফল"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/govt_admision" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="নিয়োগ সংক্রান্ত"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/training" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="প্রশিক্ষণ"
+                                                android:textAlignment="center" />
+
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/online_application" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="অনলাইন আবেদন"
+                                                android:textAlignment="center" />
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="120dp"
+                                android:layout_height="110dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="110dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="3dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/gray">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                app:srcCompat="@drawable/passport_visa" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="5dp"
+                                                android:maxLines="2"
+                                                android:text="পাসপোর্ট, ভিসা ও ইমিগ্রেশন"
+                                                android:textAlignment="center" />
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

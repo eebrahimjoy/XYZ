@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.HomeActivity"
+        <activity android:name=".view.activity.ShowTheViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
+        </activity>
+        <activity
+            android:name=".view.activity.BangladeshPortalActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar">
             <intent-filter>
@@ -18,8 +23,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.MainActivity">
+        <activity
+            android:name=".view.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
+        <activity android:name=".view.activity.MainActivity" />
     </application>
 
 </manifest>
