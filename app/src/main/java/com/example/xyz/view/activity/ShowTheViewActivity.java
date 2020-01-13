@@ -40,6 +40,7 @@ public class ShowTheViewActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
 
+
         List<String> strings = new ArrayList<>();
 
         strings.add("ডেসকো ইন্টারনেট বিল পরিশোধ");
@@ -66,6 +67,34 @@ public class ShowTheViewActivity extends AppCompatActivity {
         strings.add("বিটিসিএল টেলিফোন বিল");
         strings.add("বিটিসিএল এডিএসএল ইন্টারনেট বিল");
         strings.add("বিল অন ওয়েব - (বিপিডিবি)");
+
+        List<String> stringsBengali = new ArrayList<>();
+
+
+        stringsBengali.add("Desko Internet Bill Porishud");
+        stringsBengali.add("Online Vesel Bill, (Nou Poribohon montronaloy)");
+        stringsBengali.add("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho)");
+        stringsBengali.add("Online Payment (Khoolna, Wasa");
+        stringsBengali.add("Online Bill Pay, (Titas Gass Transmission And Distribution Company)");
+        stringsBengali.add("Online Pani Bill, (Chottogram , Wasa)");
+        stringsBengali.add("Online Payment (Dhaka, Wasa)");
+        stringsBengali.add("Deep Tubewel E-Bill,(Chottogram , Wasa)");
+        stringsBengali.add("Desko Meter Rating");
+        stringsBengali.add("Desko E Bill");
+        stringsBengali.add("Online Bill Payment, D.P.D.C");
+        stringsBengali.add("D.P.D.C, Biddhot Biller Payment");
+        stringsBengali.add("B.S.T.I, Billing Software");
+        stringsBengali.add("Bill Payment,( Bangladesh Tele Communication Company Limited)");
+        stringsBengali.add("Tariff Rate, D.P.D.C ");
+        stringsBengali.add("Online Vesel Bill, (Bondor Bohirvurto Network)");
+        stringsBengali.add("Desko Onumudito Payment Kendro");
+        stringsBengali.add("Online Payment (Khulna Unnoyon Kortipokkho)");
+        stringsBengali.add("Internet Bill Payment (Biddhot , Jalanee Ebong Khoniz Sompodh Montronaloy)");
+        stringsBengali.add("D.P.D.C Biddhot Bill");
+        stringsBengali.add("Dhaka Wasa Panir Bill Porushudh");
+        stringsBengali.add("B.T.C.L, Telephone Bill");
+        stringsBengali.add("B.T.C.L, A.D.S.L, Internet Bill");
+        stringsBengali.add("Bill On Web, (B.P.D.B)");
 
 
         List<Drawable> drawables = new ArrayList<>();
@@ -98,7 +127,7 @@ public class ShowTheViewActivity extends AppCompatActivity {
         drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
         drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
 
-        complimentAdapter = new ComplimentAdapter(strings, this, ShowTheViewActivity.this,drawables);
+        complimentAdapter = new ComplimentAdapter(strings, this, ShowTheViewActivity.this, drawables, stringsBengali);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(complimentAdapter);
 

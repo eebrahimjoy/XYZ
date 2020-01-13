@@ -35,6 +35,7 @@ import java.util.Locale;
 public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.ViewHolder> implements OnPageChangeListener, OnLoadCompleteListener {
 
     private List<String> complimentIssues;
+    private List<String> stringListBengali;
     private Context context;
     Activity activity;
     List<Drawable> drawables;
@@ -50,8 +51,9 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     TextToSpeech textToSpeech;
 
 
-    public ComplimentAdapter(List<String> complimentIssues, Context context, Activity activity, List<Drawable> drawables) {
+    public ComplimentAdapter(List<String> complimentIssues, Context context, Activity activity, List<Drawable> drawables, List<String> stringListBengali) {
         this.complimentIssues = complimentIssues;
+        this.stringListBengali = stringListBengali;
         this.context = context;
         this.activity = activity;
         this.drawables = drawables;
@@ -78,6 +80,7 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     public void onBindViewHolder(@NonNull final ComplimentAdapter.ViewHolder viewHolder, final int position) {
 
         final String string = complimentIssues.get(position);
+        final String stringBengali = stringListBengali.get(position);
         final Drawable drawable = drawables.get(position);
 
         viewHolder.binding.nameTV.setText(string);
@@ -147,18 +150,7 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
         viewHolder.binding.voiceTextIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (position==0){
-                    textToSpeech.speak("Desko Internet Bill Porishud", TextToSpeech.QUEUE_FLUSH, null);
-                }else if (position==1){
-                    textToSpeech.speak("Online Vesel Bill (Nou Poribohon montronaloy)", TextToSpeech.QUEUE_FLUSH, null);
-
-                } else if (position == 2) {
-                    textToSpeech.speak("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho", TextToSpeech.QUEUE_FLUSH, null);
-
-                } else if (position == 2) {
-                    textToSpeech.speak("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho", TextToSpeech.QUEUE_FLUSH, null);
-
-                }
+                textToSpeech.speak(stringBengali, TextToSpeech.QUEUE_FLUSH, null);
             }
         });
 
