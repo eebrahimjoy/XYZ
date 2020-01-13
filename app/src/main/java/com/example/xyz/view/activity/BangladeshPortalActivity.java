@@ -16,14 +16,31 @@ public class BangladeshPortalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_bangladesh_portal);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bangladesh_portal);
 
 
-        binding.provideServiceCV.setOnClickListener(new View.OnClickListener() {
+        binding.utilityBillCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BangladeshPortalActivity.this,ShowTheViewActivity.class));
+                startActivity(new Intent(BangladeshPortalActivity.this, UtilityBillActivity.class));
+            }
+        });
+        binding.transportServiceCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, TransportServiceActivity.class));
+            }
+        });
+        binding.healthMinistryCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, HealthMinistryActivity.class));
+            }
+        });
+        binding.postalCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, PostalActivity.class));
             }
         });
     }

@@ -10,21 +10,21 @@ import android.view.View;
 
 import com.example.xyz.R;
 import com.example.xyz.adapter.ComplimentAdapter;
-import com.example.xyz.databinding.ActivityShowTheViewBinding;
+import com.example.xyz.databinding.ActivityUtilityBillBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowTheViewActivity extends AppCompatActivity {
+public class UtilityBillActivity extends AppCompatActivity {
 
-    ActivityShowTheViewBinding binding;
+    ActivityUtilityBillBinding binding;
     ComplimentAdapter complimentAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_show_the_view);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_utility_bill);
         initRecyclerView();
 
         binding.backBtnIV.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +126,7 @@ public class ShowTheViewActivity extends AppCompatActivity {
         drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
         drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
 
-        complimentAdapter = new ComplimentAdapter(strings, this, ShowTheViewActivity.this, drawables, stringsBengali);
+        complimentAdapter = new ComplimentAdapter(strings, this, UtilityBillActivity.this, drawables, stringsBengali);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(complimentAdapter);
 

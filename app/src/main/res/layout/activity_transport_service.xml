@@ -7,8 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".view.activity.UtilityBillActivity">
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -39,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/backBtnIV"
-                    android:text="ইউটিলিটি বিল"
+                    android:text="যানবাহন সেবা"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="18sp" />

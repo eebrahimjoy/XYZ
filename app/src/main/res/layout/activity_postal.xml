@@ -7,31 +7,29 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".view.activity.UtilityBillActivity">
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:elevation="5dp"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorPrimaryDark"
+            android:elevation="5dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:tint="@color/white"
-                    android:layout_centerVertical="true"
                     android:id="@+id/backBtnIV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:paddingTop="5dp"
                     android:paddingRight="20dp"
                     android:paddingBottom="5dp"
                     android:src="@drawable/ic_arrow_back_black_24dp"
-                    />
+                    android:tint="@color/white" />
 
                 <TextView
                     android:id="@+id/searchServiceATV"
@@ -39,20 +37,20 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/backBtnIV"
-                    android:text="ইউটিলিটি বিল"
+                    android:text="পোস্টাল ও কুরিয়ার"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="3dp"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" />
 
 
     </LinearLayout>
