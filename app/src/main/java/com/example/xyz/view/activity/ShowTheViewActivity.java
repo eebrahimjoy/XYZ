@@ -73,11 +73,11 @@ public class ShowTheViewActivity extends AppCompatActivity {
 
         stringsBengali.add("Desko Internet Bill Porishud");
         stringsBengali.add("Online Vesel Bill, (Nou Poribohon montronaloy)");
-        stringsBengali.add("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho)");
-        stringsBengali.add("Online Payment (Khoolna, Wasa");
-        stringsBengali.add("Online Bill Pay, (Titas Gass Transmission And Distribution Company)");
+        stringsBengali.add("Online Payment, (Pani SorobRahoo Evong Poy Niskashon KortiPokkho)");
+        stringsBengali.add("Online Payment, (Khoolna, Wasa");
+        stringsBengali.add("Online Bill Pay, (Teetas Gass Transmission And Distribution Company)");
         stringsBengali.add("Online Pani Bill, (Chottogram , Wasa)");
-        stringsBengali.add("Online Payment (Dhaka, Wasa)");
+        stringsBengali.add("Online Payment, (Dhaka, Wasa)");
         stringsBengali.add("Deep Tubewel E-Bill,(Chottogram , Wasa)");
         stringsBengali.add("Desko Meter Rating");
         stringsBengali.add("Desko E Bill");
