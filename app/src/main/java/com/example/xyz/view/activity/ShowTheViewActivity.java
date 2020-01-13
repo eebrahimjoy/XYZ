@@ -78,7 +78,7 @@ public class ShowTheViewActivity extends AppCompatActivity {
         stringsBengali.add("Online Bill Pay, (Teetas Gass Transmission And Distribution Company)");
         stringsBengali.add("Online Pani Bill, (Chottogram , Wasa)");
         stringsBengali.add("Online Payment, (Dhaka, Wasa)");
-        stringsBengali.add("Deep Tubewel E-Bill,(Chottogram , Wasa)");
+        stringsBengali.add("Deep, Tubewell, E-Bill,(Chottogram , Wasa)");
         stringsBengali.add("Desko Meter Rating");
         stringsBengali.add("Desko E Bill");
         stringsBengali.add("Online Bill Payment, D.P.D.C");
