@@ -1,5 +1,6 @@
 package com.example.xyz.adapter;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -33,6 +34,7 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
 
     private List<String> complimentIssues;
     private Context context;
+    Activity activity;
     private Dialog dialog;
     private ImageView backBtn;
     private WebView webViewId;
@@ -43,10 +45,10 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     String pdfFileName;
 
 
-    public ComplimentAdapter(List<String> complimentIssues, Context context) {
+    public ComplimentAdapter(List<String> complimentIssues, Context context, Activity activity) {
         this.complimentIssues = complimentIssues;
         this.context = context;
-        initSelectedTestDialog();
+        this.activity = activity;
     }
 
     @NonNull
@@ -76,6 +78,7 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
         viewHolder.binding.docTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                initSelectedTestDialog();
 
                 displayFromAsset(SAMPLE_FILE);
 
@@ -160,16 +163,15 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
 
     }
 
-    private void displayFromAsset(String assetFileName)
-    {
+    private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
         pdfView.fromAsset(SAMPLE_FILE)
-                .pages(0)
-                .defaultPage(pageNumber)
                 .enableSwipe(true)
                 .enableDoubletap(true)
-                .onPageChange(this)
+                .pageSnap(true)
+                .autoSpacing(true)
+                .pageFling(true)
                 .swipeHorizontal(true)
                 .pageFitPolicy(FitPolicy.WIDTH)
                 .enableAnnotationRendering(true)
@@ -180,17 +182,16 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     }
 
 
-
     @Override
-    public void onPageChanged(int page, int pageCount)
-    {
+    public void onPageChanged(int page, int pageCount) {
         pageNumber = page;
+        activity.setTitle(String.format("%s %s / %s", pdfFileName, page + 1, pageCount));
+
 
     }
 
     @Override
-    public void loadComplete(int nbPages)
-    {
+    public void loadComplete(int nbPages) {
         PdfDocument.Meta meta = pdfView.getDocumentMeta();
         printBookmarksTree(pdfView.getTableOfContents(), "-");
     }

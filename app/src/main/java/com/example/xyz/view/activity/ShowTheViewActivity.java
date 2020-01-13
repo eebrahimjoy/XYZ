@@ -47,7 +47,7 @@ public class ShowTheViewActivity extends AppCompatActivity {
         strings.add("ডেসকো অনুমোদিত পেমেন্ট কেন্দ্র");
         strings.add("বিল অন ওয়েব - (বিপিডিবি)");
 
-        complimentAdapter = new ComplimentAdapter( strings,this);
+        complimentAdapter = new ComplimentAdapter( strings,this,ShowTheViewActivity.this);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(complimentAdapter);
 
