@@ -15,13 +15,14 @@
             android:layout_width="match_parent"
             android:elevation="5dp"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white">
+            android:background="@color/colorPrimaryDark">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:tint="@color/white"
                     android:layout_centerVertical="true"
                     android:id="@+id/backBtnIV"
                     android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/backBtnIV"
                     android:text="ইউটিলিটি বিল"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="18sp" />
 
