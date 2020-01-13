@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,15 +21,19 @@ public class ShowTheViewActivity extends AppCompatActivity {
     ComplimentAdapter complimentAdapter;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_show_the_view);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_show_the_view);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         initRecyclerView();
 
-
+        binding.backBtnIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
     }
@@ -36,18 +41,64 @@ public class ShowTheViewActivity extends AppCompatActivity {
     private void initRecyclerView() {
 
         List<String> strings = new ArrayList<>();
+
         strings.add("ডেসকো ইন্টারনেট বিল পরিশোধ");
+        strings.add("অনলাইন ভেসেল বিল (নৌ-পরিবহন মন্ত্রণালয়)");
+        strings.add("অনলাইন পেমেন্ট (পানি সরবরাহ ও পয়:নিষ্কাশন কর্তৃপক্ষ)");
         strings.add("অনলাইন পেমেন্ট (খুলনা ওয়াসা)");
+        strings.add("অনলাইন বিল পে (তিতাস গ্যাস ট্রান্সমিশন এন্ড ডিস্ট্রিবিউশন কোম্পানি)");
+        strings.add("অনলাইন পানি বিল (চট্টগ্রাম ওয়াসা)");
         strings.add("অনলাইন পেমেন্ট (ঢাকা ওয়াসা)");
+        strings.add("ডিপ টিউব ওয়েল ই বিল (চট্টগ্রাম ওয়াসা)");
         strings.add("ডেসকো মিটার রিডিং");
         strings.add("ডেসকো ই বিল");
         strings.add("অনলাইন বিল পেমেন্ট -DPDC");
         strings.add("DPDC বিদ্যুৎ বিলের পেমেন্ট");
+        strings.add("বিএসটিআই বিলিং সফটওয়্যার");
+        strings.add("বিল পেমেন্ট (বাংলাদেশ টেলিকমিউনিকেশনস কোম্পানি লিমিটেড)");
         strings.add("ট্যারিফ রেট -DPDC");
+        strings.add("অনলাইন ভেসেল বিল (বন্দর বহির্ভূত নেটওয়ার্ক) (চট্টগ্রাম বন্দর কর্তৃপক্ষ)");
         strings.add("ডেসকো অনুমোদিত পেমেন্ট কেন্দ্র");
+        strings.add("অনলাইন পেমেন্ট (খুলনা উন্নয়ন কর্তৃপক্ষ)");
+        strings.add("ইন্টারনেট বিল পেমেন্ট (বিদ্যুৎ, জ্বালানি ও খনিজ সম্পদ মন্ত্রণালয়)");
+        strings.add("ডি.পি.ডি.সি. বিদ্যুৎ বিল");
+        strings.add("ঢাকা ওয়াসা পানির বিল পরিশোধ");
+        strings.add("বিটিসিএল টেলিফোন বিল");
+        strings.add("বিটিসিএল এডিএসএল ইন্টারনেট বিল");
         strings.add("বিল অন ওয়েব - (বিপিডিবি)");
 
-        complimentAdapter = new ComplimentAdapter( strings,this,ShowTheViewActivity.this);
+
+        List<Drawable> drawables = new ArrayList<>();
+
+        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
+        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
+        drawables.add(getResources().getDrawable(R.drawable.ic_money_three));
+        drawables.add(getResources().getDrawable(R.drawable.ic_telephone_four));
+        drawables.add(getResources().getDrawable(R.drawable.ic_gass_five));
+        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
+        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
+        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
+        drawables.add(getResources().getDrawable(R.drawable.ic_money_three));
+        drawables.add(getResources().getDrawable(R.drawable.ic_telephone_four));
+        drawables.add(getResources().getDrawable(R.drawable.ic_gass_five));
+        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
+        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
+        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
+        drawables.add(getResources().getDrawable(R.drawable.ic_money_three));
+        drawables.add(getResources().getDrawable(R.drawable.ic_telephone_four));
+        drawables.add(getResources().getDrawable(R.drawable.ic_gass_five));
+        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
+        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
+        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
+        drawables.add(getResources().getDrawable(R.drawable.ic_money_three));
+        drawables.add(getResources().getDrawable(R.drawable.ic_telephone_four));
+        drawables.add(getResources().getDrawable(R.drawable.ic_gass_five));
+        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
+        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
+        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
+        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
+
+        complimentAdapter = new ComplimentAdapter(strings, this, ShowTheViewActivity.this,drawables);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(complimentAdapter);
 

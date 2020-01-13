@@ -13,7 +13,8 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="@color/white">
 
             <RelativeLayout
@@ -21,6 +22,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:layout_centerVertical="true"
                     android:id="@+id/backBtnIV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -46,6 +48,7 @@
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="3dp"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

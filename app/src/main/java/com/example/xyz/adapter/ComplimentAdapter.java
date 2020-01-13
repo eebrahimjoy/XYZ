@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -20,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.xyz.R;
 import com.example.xyz.databinding.ModelPendingServiceItemBinding;
-import com.example.xyz.otherClasses.StaticKeys;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
@@ -29,12 +30,14 @@ import com.github.barteksc.pdfviewer.util.FitPolicy;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
+import java.util.Locale;
 
 public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.ViewHolder> implements OnPageChangeListener, OnLoadCompleteListener {
 
     private List<String> complimentIssues;
     private Context context;
     Activity activity;
+    List<Drawable> drawables;
     private Dialog dialog;
     private ImageView backBtn;
     private WebView webViewId;
@@ -44,11 +47,23 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     Integer pageNumber = 0;
     String pdfFileName;
 
+    TextToSpeech textToSpeech;
 
-    public ComplimentAdapter(List<String> complimentIssues, Context context, Activity activity) {
+
+    public ComplimentAdapter(List<String> complimentIssues, Context context, Activity activity, List<Drawable> drawables) {
         this.complimentIssues = complimentIssues;
         this.context = context;
         this.activity = activity;
+        this.drawables = drawables;
+
+        textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if (i != TextToSpeech.ERROR) {
+                    textToSpeech.setLanguage(Locale.UK);
+                }
+            }
+        });
     }
 
     @NonNull
@@ -62,10 +77,11 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull final ComplimentAdapter.ViewHolder viewHolder, final int position) {
 
-
         final String string = complimentIssues.get(position);
+        final Drawable drawable = drawables.get(position);
 
         viewHolder.binding.nameTV.setText(string);
+        viewHolder.binding.imageIV.setImageDrawable(drawable);
 
         viewHolder.binding.youtubeTV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,6 +143,25 @@ public class ComplimentAdapter extends RecyclerView.Adapter<ComplimentAdapter.Vi
 
             }
         });
+
+        viewHolder.binding.voiceTextIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (position==0){
+                    textToSpeech.speak("Desko Internet Bill Porishud", TextToSpeech.QUEUE_FLUSH, null);
+                }else if (position==1){
+                    textToSpeech.speak("Online Vesel Bill (Nou Poribohon montronaloy)", TextToSpeech.QUEUE_FLUSH, null);
+
+                } else if (position == 2) {
+                    textToSpeech.speak("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho", TextToSpeech.QUEUE_FLUSH, null);
+
+                } else if (position == 2) {
+                    textToSpeech.speak("Online Payment (Pani SorobRahoo Evong Poy Niskashon KortiPokkho", TextToSpeech.QUEUE_FLUSH, null);
+
+                }
+            }
+        });
+
 
     }
 
