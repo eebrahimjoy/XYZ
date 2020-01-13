@@ -43,6 +43,36 @@ public class BangladeshPortalActivity extends AppCompatActivity {
                 startActivity(new Intent(BangladeshPortalActivity.this, PostalActivity.class));
             }
         });
+        binding.radioCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, RadioActivity.class));
+            }
+        });
+        binding.faqCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, FAQActivity.class));
+            }
+        });
+        binding.trageryCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, TrageryActivity.class));
+            }
+        });
+        binding.fishCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, FishActivity.class));
+            }
+        });
+        binding.digitalCenterCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BangladeshPortalActivity.this, DigitalCenterActivity.class));
+            }
+        });
     }
 
 }

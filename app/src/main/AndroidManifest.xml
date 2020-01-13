@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.UtilityBillActivity"
+        <activity
+            android:name=".view.activity.UtilityBillActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBar">
-        </activity>
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".view.activity.TransportServiceActivity"
             android:screenOrientation="portrait"
@@ -23,6 +23,26 @@
             android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".view.activity.PostalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.activity.RadioActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.activity.FAQActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.activity.TrageryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.activity.FishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.activity.DigitalCenterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar"></activity>
         <activity

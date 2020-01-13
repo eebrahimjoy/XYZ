@@ -70,7 +70,7 @@ public class PostalActivity extends AppCompatActivity {
         stringsBengali.add("Antorjarteek Dak Khoroch Calculator");
         stringsBengali.add("Ovvontoreen Dak Khoroch Calculator");
         stringsBengali.add("Postal Code Fiber");
-        stringsBengali.add("Dak, Jibonbimaar Premium Calculator");
+        stringsBengali.add("Duk, Jibonbimaar Premium Calculator");
 
 
         List<Drawable> drawables = new ArrayList<>();

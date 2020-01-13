@@ -308,6 +308,7 @@
 
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/radioCV"
                                     android:layout_width="110dp"
                                     android:layout_height="100dp"
                                     android:layout_centerInParent="true"
@@ -353,6 +354,7 @@
 
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/faqCV"
                                     android:layout_width="110dp"
                                     android:layout_height="100dp"
                                     android:layout_centerInParent="true"
@@ -410,6 +412,7 @@
 
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/trageryCV"
                                     android:layout_width="110dp"
                                     android:layout_height="100dp"
                                     android:layout_centerInParent="true"
@@ -456,6 +459,7 @@
 
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/fishCV"
                                     android:layout_width="110dp"
                                     android:layout_height="100dp"
                                     android:layout_centerInParent="true"
@@ -501,6 +505,7 @@
 
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/digitalCenterCV"
                                     android:layout_width="110dp"
                                     android:layout_height="100dp"
                                     android:layout_centerInParent="true"
@@ -544,12 +549,12 @@
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_gravity="center"
-                            android:gravity="center"
+                       <!-- <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginBottom="5dp"
+                            android:gravity="center"
                             android:orientation="horizontal">
 
                             <RelativeLayout
@@ -693,11 +698,11 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="center"
-                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginBottom="5dp"
+                            android:gravity="center"
                             android:orientation="horizontal">
 
                             <RelativeLayout
@@ -841,11 +846,11 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_gravity="center"
-                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginBottom="5dp"
+                            android:gravity="center"
                             android:orientation="horizontal">
 
                             <RelativeLayout
@@ -983,7 +988,7 @@
 
 
                         </LinearLayout>
-
+-->
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

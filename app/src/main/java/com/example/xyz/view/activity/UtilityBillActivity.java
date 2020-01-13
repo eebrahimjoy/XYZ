@@ -122,9 +122,6 @@ public class UtilityBillActivity extends AppCompatActivity {
         drawables.add(getResources().getDrawable(R.drawable.ic_telephone_four));
         drawables.add(getResources().getDrawable(R.drawable.ic_gass_five));
         drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
-        drawables.add(getResources().getDrawable(R.drawable.ic_meter_six));
-        drawables.add(getResources().getDrawable(R.drawable.ic_online_payment_two));
-        drawables.add(getResources().getDrawable(R.drawable.ic_utility_1));
 
         complimentAdapter = new ComplimentAdapter(strings, this, UtilityBillActivity.this, drawables, stringsBengali);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
